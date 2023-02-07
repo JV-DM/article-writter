@@ -29,12 +29,10 @@ function App() {
   const [loading, setLoading] = useState(false)
 
   const handleClick = async () => {
-    if(text != ""){
       setLoading(true)
       let generatedText = await aiService(url, game)
       setText(generatedText)
       setLoading(false)
-    }
   }
 
   return (
